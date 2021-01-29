@@ -10,24 +10,24 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 flag = 1
 
 
-~^#Left::
+^#Left::
 If (flag != 1)
 {
     flag := flag - 1
     Send ^#{Left}
 } Else {
     Send ^#{Right 2}
-    flag = 3
+    flag := flag + 2
 }
 Return
 
-~^#Right::
+^#Right::
 If (flag != 3)
 {
     flag := flag + 1
     Send ^#{Right}
 } Else {
     Send ^#{Left 2}
-    flag = 1
+    flag := flag - 2
 }
-Return
+return
