@@ -1,9 +1,10 @@
-#NoTrayIcon
+; #NoTrayIcon
 #SingleInstance Force
 #UseHook On
 
 flag = 1
 
+; Send ^!{D 2}
 
 ^#Left::
 If (flag > 1)
